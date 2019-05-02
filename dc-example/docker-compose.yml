@@ -1,0 +1,9 @@
+version: "3.7"
+services:
+  ddmal:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - "./drafts:/opt/drafts"
+    command: bash -c "tail -f /dev/null"
