@@ -7,3 +7,8 @@ services:
     volumes:
       - "./drafts:/opt/drafts"
     command: bash -c "tail -f /dev/null"
+  simssa:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: bash -c "tail -f /dev/null"
