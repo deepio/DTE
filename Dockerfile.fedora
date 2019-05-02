@@ -1,0 +1,5 @@
+FROM fedora:latest
+
+RUN set -e \
+  && dnf install -y \
+    redhat-lsb

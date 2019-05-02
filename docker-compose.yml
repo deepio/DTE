@@ -1,0 +1,37 @@
+version: "3.7"
+services:
+  all:
+    build:
+      context: .
+      dockerfile: Dockerfile.alpine
+    volumes:
+      - "./test:/opt/test"
+    command: sh -c "tail -f /dev/null"
+  archie:
+    build:
+      context: .
+      dockerfile: Dockerfile.arch
+    volumes:
+      - "./test:/opt/test"
+    command: bash -c "tail -f /dev/null"
+  debbie:
+    build:
+      context: .
+      dockerfile: Dockerfile.debian
+    volumes:
+      - "./test:/opt/test"
+    command: bash -c "tail -f /dev/null"
+  fredo:
+    build:
+      context: .
+      dockerfile: Dockerfile.fedora
+    volumes:
+      - "./test:/opt/test"
+    command: bash -c "tail -f /dev/null"
+  uub:
+    build:
+      context: .
+      dockerfile: Dockerfile.ubuntu
+    volumes:
+      - "./test:/opt/test"
+    command: bash -c "tail -f /dev/null"
